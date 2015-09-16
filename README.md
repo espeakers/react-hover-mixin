@@ -37,7 +37,7 @@ Then it will tell you which port it's hosted on so you can open it in your brows
 ### this.state.hover
 `true` or `false` depending on if it's currently being hovered over.
 
-### this.hoverable\_onMouseEnter and this.hoverable\_onMouseLeave
+### this.hoverable\_onMouseEnter | this.hoverable\_onMouseLeave
 These are event handlers provided by the mixin. Simply attach them to the element you wish to observe the hover state of.
 
 For example:
@@ -45,7 +45,7 @@ For example:
 ...
 React.createElement("div", {
     onMouseEnter: this.hoverable_onMouseEnter,
-    onMouseLeave: this.hoverable_onMouseLeave,
+    onMouseLeave: this.hoverable_onMouseLeave
   },
   ...
 ),
@@ -64,14 +64,14 @@ For example:
 React.createElement("div", {
     ref: "hoverable",
     onMouseEnter: this.hoverable_onMouseEnter,
-    onMouseLeave: this.hoverable_onMouseLeave,
+    onMouseLeave: this.hoverable_onMouseLeave
   },
   ...
 ),
 ...
 ```
 
-### this.state.hoverable\_top and this.state.hoverable\_left
+### this.state.hoverable\_top | this.state.hoverable\_left
 The top and left position of the "hoverable" element. These are handy when trying to absolute position a tooltip or dropdown.
 
 ## Installing
