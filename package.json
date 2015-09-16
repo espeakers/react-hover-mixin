@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A react mixin that will update the components state on mouse hover. Designed for tooltips, popovers, and dropdowns.",
   "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "start": "wzrd example.js"
   },
