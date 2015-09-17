@@ -1,6 +1,6 @@
 {
   "name": "react-hover-mixin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react mixin that will update the components state on mouse hover. Designed for tooltips, popovers, and dropdowns.",
   "main": "index.js",
   "files": [
