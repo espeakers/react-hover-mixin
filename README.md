@@ -74,6 +74,23 @@ React.createElement("div", {
 ### this.state.hoverable\_top | this.state.hoverable\_left
 The top and left position of the "hoverable" element. These are handy when trying to absolute position a tooltip or dropdown.
 
+### this.hoverable\_not\_relative\_to\_parent\_bounding\_rect
+Set this to true if your hoverable is not relative to the parent node.
+
+```js
+var HoverMixin = require("react-hover-mixin");
+...
+... React.createClass({
+  mixins: [HoverMixin],
+
+  hoverable_not_relative_to_parent_bounding_rect: true,
+
+  render: function(){
+    ...
+  }
+});
+```
+
 ## Installing
 ```sh
 $ npm install --save react-hover-mixin

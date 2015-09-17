@@ -51,7 +51,7 @@ module.exports = {
     var parentNode = dom_node.parentNode;
     var rect = parentNode.getBoundingClientRect();
     var parent_width = Math.max(0, parentNode.offsetWidth);
-    if(this.not_relative_to_parent_bounding_rect){
+    if(this.hoverable_not_relative_to_parent_bounding_rect){
       rect = {top: 0, left: 0};
     }
     var top = parseInt(rect.top - Math.max(0, dom_node.offsetHeight), 10) || 0;
