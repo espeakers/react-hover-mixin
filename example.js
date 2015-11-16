@@ -1,6 +1,6 @@
 var dd = require("react-dd");
-var React = require("react");
 var xtend = require("xtend");
+var ReactDOM = require("react-dom");
 var HoverMixin = require("./");
 
 var css_question_mark = {
@@ -53,7 +53,8 @@ var Advanced = dd.createClass({
   }
 });
 
-React.render(dd.createClass({
+var mountPoint = document.createElement("div");
+ReactDOM.render(dd.createClass({
   render: function(){
     return dd.div(null,
       dd.h1(null, "HoverMixin example"),
@@ -63,4 +64,5 @@ React.render(dd.createClass({
       Advanced()
     );
   }
-})(), document.body);
+})(), mountPoint);
+document.body.appendChild(mountPoint);

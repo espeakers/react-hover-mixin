@@ -1,3 +1,4 @@
+var isDom = require("is-dom");
 var now = Date.now || function(){
   return new Date().getTime();
 };
@@ -44,7 +45,10 @@ module.exports = {
     this.___fastStateChangeHover();
   },
   componentDidUpdate: function(){
-    var dom_node = this.refs.hoverable && this.refs.hoverable.getDOMNode && this.refs.hoverable.getDOMNode();
+    var dom_node = this.refs.hoverable;//react 0.14.+
+    if(!isDom(dom_node)){//try the pre 0.14 method
+      dom_node = this.refs.hoverable && this.refs.hoverable.getDOMNode && this.refs.hoverable.getDOMNode();
+    }
     if(!dom_node || !this.state.hover){
       return;
     }
